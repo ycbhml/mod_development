@@ -1,0 +1,93 @@
+[
+    {
+        "component_name": "",
+        "root_vs": "653c63ba4a73ca8b",
+        "draw_vb": "0f1c8e27",
+        "position_vb": "8294fe98",
+        "blend_vb": "d8c43862",
+        "texcoord_vb": "a327ea5e",
+        "ib": "045e580b",
+        "object_indexes": [
+            0,
+            57279,
+            73413
+        ],
+        "object_classifications": [
+            "Head",
+            "Body",
+            "Dress"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "38b2a6a7"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "4c1b5389"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "9612c13d"
+                ]
+            ],
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "42fb3933"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "c4dac88d"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "901cbcaa"
+                ]
+            ],
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "c4dac88d"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "901cbcaa"
+                ]
+            ]
+        ]
+    },
+    {
+        "component_name": "Face",
+        "root_vs": "",
+        "draw_vb": "",
+        "position_vb": "",
+        "blend_vb": "",
+        "texcoord_vb": "",
+        "ib": "",
+        "object_indexes": [
+            0
+        ],
+        "object_classifications": [
+            "Head"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "e6f05166"
+                ]
+            ]
+        ]
+    }
+]

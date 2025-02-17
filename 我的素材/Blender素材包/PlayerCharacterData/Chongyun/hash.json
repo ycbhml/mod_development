@@ -1,0 +1,69 @@
+[
+    {
+        "component_name": "",
+        "root_vs": "653c63ba4a73ca8b",
+        "draw_vb": "2ceb44ef",
+        "position_vb": "489e3621",
+        "blend_vb": "2f997aab",
+        "texcoord_vb": "93136ff7",
+        "ib": "0c6dd2d6",
+        "object_indexes": [
+            0,
+            13656
+        ],
+        "object_classifications": [
+            "Head",
+            "Body"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "330014a8"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "ac6bf9fc"
+                ]
+            ],
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "87b0117a"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "5f9e0873"
+                ]
+            ]
+        ]
+    },
+    {
+        "component_name": "Face",
+        "root_vs": "",
+        "draw_vb": "",
+        "position_vb": "",
+        "blend_vb": "",
+        "texcoord_vb": "",
+        "ib": "",
+        "object_indexes": [
+            0
+        ],
+        "object_classifications": [
+            "Head"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "b8f33342"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "component_name": "",
+        "root_vs": "653c63ba4a73ca8b",
+        "draw_vb": "d90dae49",
+        "position_vb": "348e58c4",
+        "blend_vb": "e5fe748c",
+        "texcoord_vb": "1b2f9d1b",
+        "ib": "3da6f8c7",
+        "object_indexes": [
+            0,
+            13077,
+            60117
+        ],
+        "object_classifications": [
+            "Head",
+            "Body",
+            "Dress"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "3de99d18"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "07117f1f"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "2d25bfac"
+                ]
+            ],
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "37e64152"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "48aa6e02"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "3227b0da"
+                ]
+            ],
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "3de99d18"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "07117f1f"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "2d25bfac"
+                ]
+            ]
+        ]
+    },
+    {
+        "component_name": "Face",
+        "root_vs": "",
+        "draw_vb": "",
+        "position_vb": "",
+        "blend_vb": "",
+        "texcoord_vb": "",
+        "ib": "",
+        "object_indexes": [
+            0
+        ],
+        "object_classifications": [
+            "Head"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "b21bdf4c"
+                ]
+            ]
+        ]
+    }
+]

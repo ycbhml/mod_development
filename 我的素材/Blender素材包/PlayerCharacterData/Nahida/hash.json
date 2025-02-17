@@ -1,0 +1,117 @@
+[
+    {
+        "component_name": "",
+        "root_vs": "653c63ba4a73ca8b",
+        "draw_vb": "ee37e2d7",
+        "position_vb": "7106f05d",
+        "blend_vb": "de60b92f",
+        "texcoord_vb": "902b57ef",
+        "ib": "9b13c166",
+        "object_indexes": [
+            0,
+            31143,
+            71187,
+            76875
+        ],
+        "object_classifications": [
+            "Head",
+            "Body",
+            "Dress",
+            "Extra"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "23feab66"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "0a1a4882"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "f9609355"
+                ]
+            ],
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "624ae227"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "bf2d405f"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "5fcf9362"
+                ]
+            ],
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "624ae227"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "bf2d405f"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "5fcf9362"
+                ]
+            ],
+            [
+                [
+                    "NormalMap",
+                    ".dds",
+                    "23feab66"
+                ],
+                [
+                    "Diffuse",
+                    ".dds",
+                    "0a1a4882"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "f9609355"
+                ]
+            ]
+        ]
+    },
+    {
+        "component_name": "Face",
+        "root_vs": "",
+        "draw_vb": "",
+        "position_vb": "",
+        "blend_vb": "",
+        "texcoord_vb": "",
+        "ib": "",
+        "object_indexes": [
+            0
+        ],
+        "object_classifications": [
+            "Head"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "895cd4d0"
+                ]
+            ]
+        ]
+    }
+]

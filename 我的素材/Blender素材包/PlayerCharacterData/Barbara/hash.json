@@ -1,0 +1,83 @@
+[
+    {
+        "component_name": "",
+        "root_vs": "653c63ba4a73ca8b",
+        "draw_vb": "7df968e8",
+        "position_vb": "85282151",
+        "blend_vb": "22a31278",
+        "texcoord_vb": "0f18519e",
+        "ib": "1bc3490d",
+        "object_indexes": [
+            0,
+            12015,
+            46248
+        ],
+        "object_classifications": [
+            "Head",
+            "Body",
+            "Dress"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "d9d24fbf"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "f89f1ed6"
+                ]
+            ],
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "d5fd9da6"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "0c0ce0ef"
+                ]
+            ],
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "d5fd9da6"
+                ],
+                [
+                    "LightMap",
+                    ".dds",
+                    "0c0ce0ef"
+                ]
+            ]
+        ]
+    },
+    {
+        "component_name": "Face",
+        "root_vs": "",
+        "draw_vb": "",
+        "position_vb": "",
+        "blend_vb": "",
+        "texcoord_vb": "",
+        "ib": "",
+        "object_indexes": [
+            0
+        ],
+        "object_classifications": [
+            "Head"
+        ],
+        "texture_hashes": [
+            [
+                [
+                    "Diffuse",
+                    ".dds",
+                    "d9f80241"
+                ]
+            ]
+        ]
+    }
+]

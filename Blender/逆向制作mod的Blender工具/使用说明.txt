@@ -1,0 +1,13 @@
+1.comilarex_tools_v2_2作用：
+
+在Blender权重模式下 传递权重
+
+2.XXMITooll的作用：
+
+导入 导出 3dmigoto的ib vb文件和 ib.txt vb.txt文件
+
+将模型导出为可供原神 崩铁 崩坏 绝区零 使用的mod文件
+
+3.MMT 的作用：
+
+里面有一个合并定点组权重的功能
