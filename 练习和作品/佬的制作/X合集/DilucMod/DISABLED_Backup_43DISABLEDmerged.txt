@@ -1,0 +1,1368 @@
+; Merged Mod: .\DilucModf0000\Diluc.ini, .\DilucModf0001\Diluc.ini, .\DilucModf0002\Diluc.ini, .\DilucModf0003\Diluc.ini, .\DilucModf0004\Diluc.ini, .\DilucModf0005\Diluc.ini, .\DilucModf0006\Diluc.ini, .\DilucModf0007\Diluc.ini, .\DilucModf0008\Diluc.ini, .\DilucModf0009\Diluc.ini, .\DilucModf0010\Diluc.ini, .\DilucModf0011\Diluc.ini, .\DilucModf0012\Diluc.ini, .\DilucModf0013\Diluc.ini, .\DilucModf0014\Diluc.ini, .\DilucModf0015\Diluc.ini, .\DilucModf0016\Diluc.ini, .\DilucModf0017\Diluc.ini, .\DilucModf0018\Diluc.ini, .\DilucModf0019\Diluc.ini, .\DilucModf0020\Diluc.ini
+
+; Constants ---------------------------
+
+[Constants]
+global persist $swapvar = 0
+global $ActiveCharacter = 0
+
+[KeySwap]
+condition = $ActiveCharacter == 1
+key =  y
+type = cycle
+$swapvar = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+
+[Present]
+post $ActiveCharacter = 0
+
+; Overrides ---------------------------
+
+[TextureOverrideDilucPosition]
+hash = 6fdb0963
+run = CommandListDilucPosition
+$ActiveCharacter = 1
+
+[TextureOverrideDilucBlend]
+hash = 6fd20cc4
+run = CommandListDilucBlend
+
+[TextureOverrideDilucTexcoord]
+hash = aee0755a
+run = CommandListDilucTexcoord
+
+[TextureOverrideDilucVertexLimitRaise]
+hash = 56159d74
+
+[TextureOverrideDilucIB]
+hash = d1ac0687
+run = CommandListDilucIB
+
+[TextureOverrideDilucHead]
+hash = d1ac0687
+match_first_index = 0
+run = CommandListDilucHead
+
+[TextureOverrideDilucBody]
+hash = d1ac0687
+match_first_index = 10896
+run = CommandListDilucBody
+
+[TextureOverrideDilucFaceHeadDiffuse]
+hash = 8b50c50f
+run = CommandListDilucFaceHeadDiffuse
+
+; CommandList -------------------------
+
+[CommandListDilucPosition]
+if $swapvar == 0
+	vb0 = ResourceDilucPosition.0
+else if $swapvar == 1
+	vb0 = ResourceDilucPosition.1
+else if $swapvar == 2
+	vb0 = ResourceDilucPosition.2
+else if $swapvar == 3
+	vb0 = ResourceDilucPosition.3
+else if $swapvar == 4
+	vb0 = ResourceDilucPosition.4
+else if $swapvar == 5
+	vb0 = ResourceDilucPosition.5
+else if $swapvar == 6
+	vb0 = ResourceDilucPosition.6
+else if $swapvar == 7
+	vb0 = ResourceDilucPosition.7
+else if $swapvar == 8
+	vb0 = ResourceDilucPosition.8
+else if $swapvar == 9
+	vb0 = ResourceDilucPosition.9
+else if $swapvar == 10
+	vb0 = ResourceDilucPosition.10
+else if $swapvar == 11
+	vb0 = ResourceDilucPosition.11
+else if $swapvar == 12
+	vb0 = ResourceDilucPosition.12
+else if $swapvar == 13
+	vb0 = ResourceDilucPosition.13
+else if $swapvar == 14
+	vb0 = ResourceDilucPosition.14
+else if $swapvar == 15
+	vb0 = ResourceDilucPosition.15
+else if $swapvar == 16
+	vb0 = ResourceDilucPosition.16
+else if $swapvar == 17
+	vb0 = ResourceDilucPosition.17
+else if $swapvar == 18
+	vb0 = ResourceDilucPosition.18
+else if $swapvar == 19
+	vb0 = ResourceDilucPosition.19
+else if $swapvar == 20
+	vb0 = ResourceDilucPosition.20
+endif
+
+[CommandListDilucBlend]
+if $swapvar == 0
+	vb1 = ResourceDilucBlend.0
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 1
+	vb1 = ResourceDilucBlend.1
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 2
+	vb1 = ResourceDilucBlend.2
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 3
+	vb1 = ResourceDilucBlend.3
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 4
+	vb1 = ResourceDilucBlend.4
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 5
+	vb1 = ResourceDilucBlend.5
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 6
+	vb1 = ResourceDilucBlend.6
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 7
+	vb1 = ResourceDilucBlend.7
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 8
+	vb1 = ResourceDilucBlend.8
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 9
+	vb1 = ResourceDilucBlend.9
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 10
+	vb1 = ResourceDilucBlend.10
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 11
+	vb1 = ResourceDilucBlend.11
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 12
+	vb1 = ResourceDilucBlend.12
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 13
+	vb1 = ResourceDilucBlend.13
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 14
+	vb1 = ResourceDilucBlend.14
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 15
+	vb1 = ResourceDilucBlend.15
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 16
+	vb1 = ResourceDilucBlend.16
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 17
+	vb1 = ResourceDilucBlend.17
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 18
+	vb1 = ResourceDilucBlend.18
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 19
+	vb1 = ResourceDilucBlend.19
+	handling = skip
+	draw = 32185,0
+else if $swapvar == 20
+	vb1 = ResourceDilucBlend.20
+	handling = skip
+	draw = 32185,0
+endif
+
+[CommandListDilucTexcoord]
+if $swapvar == 0
+	vb1 = ResourceDilucTexcoord.0
+else if $swapvar == 1
+	vb1 = ResourceDilucTexcoord.1
+else if $swapvar == 2
+	vb1 = ResourceDilucTexcoord.2
+else if $swapvar == 3
+	vb1 = ResourceDilucTexcoord.3
+else if $swapvar == 4
+	vb1 = ResourceDilucTexcoord.4
+else if $swapvar == 5
+	vb1 = ResourceDilucTexcoord.5
+else if $swapvar == 6
+	vb1 = ResourceDilucTexcoord.6
+else if $swapvar == 7
+	vb1 = ResourceDilucTexcoord.7
+else if $swapvar == 8
+	vb1 = ResourceDilucTexcoord.8
+else if $swapvar == 9
+	vb1 = ResourceDilucTexcoord.9
+else if $swapvar == 10
+	vb1 = ResourceDilucTexcoord.10
+else if $swapvar == 11
+	vb1 = ResourceDilucTexcoord.11
+else if $swapvar == 12
+	vb1 = ResourceDilucTexcoord.12
+else if $swapvar == 13
+	vb1 = ResourceDilucTexcoord.13
+else if $swapvar == 14
+	vb1 = ResourceDilucTexcoord.14
+else if $swapvar == 15
+	vb1 = ResourceDilucTexcoord.15
+else if $swapvar == 16
+	vb1 = ResourceDilucTexcoord.16
+else if $swapvar == 17
+	vb1 = ResourceDilucTexcoord.17
+else if $swapvar == 18
+	vb1 = ResourceDilucTexcoord.18
+else if $swapvar == 19
+	vb1 = ResourceDilucTexcoord.19
+else if $swapvar == 20
+	vb1 = ResourceDilucTexcoord.20
+endif
+
+[CommandListDilucIB]
+if $swapvar == 0
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 1
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 2
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 3
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 4
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 5
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 6
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 7
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 8
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 9
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 10
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 11
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 12
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 13
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 14
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 15
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 16
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 17
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 18
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 19
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 20
+	handling = skip
+	drawindexed = auto
+endif
+
+[CommandListDilucHead]
+if $swapvar == 0
+	ib = ResourceDilucHeadIB.0
+	ps-t0 = ResourceDilucHeadDiffuse.0
+	ps-t1 = ResourceDilucHeadLightMap.0
+else if $swapvar == 1
+	ib = ResourceDilucHeadIB.1
+	ps-t0 = ResourceDilucHeadDiffuse.1
+	ps-t1 = ResourceDilucHeadLightMap.1
+else if $swapvar == 2
+	ib = ResourceDilucHeadIB.2
+	ps-t0 = ResourceDilucHeadDiffuse.2
+	ps-t1 = ResourceDilucHeadLightMap.2
+else if $swapvar == 3
+	ib = ResourceDilucHeadIB.3
+	ps-t0 = ResourceDilucHeadDiffuse.3
+	ps-t1 = ResourceDilucHeadLightMap.3
+else if $swapvar == 4
+	ib = ResourceDilucHeadIB.4
+	ps-t0 = ResourceDilucHeadDiffuse.4
+	ps-t1 = ResourceDilucHeadLightMap.4
+else if $swapvar == 5
+	ib = ResourceDilucHeadIB.5
+	ps-t0 = ResourceDilucHeadDiffuse.5
+	ps-t1 = ResourceDilucHeadLightMap.5
+else if $swapvar == 6
+	ib = ResourceDilucHeadIB.6
+	ps-t0 = ResourceDilucHeadDiffuse.6
+	ps-t1 = ResourceDilucHeadLightMap.6
+else if $swapvar == 7
+	ib = ResourceDilucHeadIB.7
+	ps-t0 = ResourceDilucHeadDiffuse.7
+	ps-t1 = ResourceDilucHeadLightMap.7
+else if $swapvar == 8
+	ib = ResourceDilucHeadIB.8
+	ps-t0 = ResourceDilucHeadDiffuse.8
+	ps-t1 = ResourceDilucHeadLightMap.8
+else if $swapvar == 9
+	ib = ResourceDilucHeadIB.9
+	ps-t0 = ResourceDilucHeadDiffuse.9
+	ps-t1 = ResourceDilucHeadLightMap.9
+else if $swapvar == 10
+	ib = ResourceDilucHeadIB.10
+	ps-t0 = ResourceDilucHeadDiffuse.10
+	ps-t1 = ResourceDilucHeadLightMap.10
+else if $swapvar == 11
+	ib = ResourceDilucHeadIB.11
+	ps-t0 = ResourceDilucHeadDiffuse.11
+	ps-t1 = ResourceDilucHeadLightMap.11
+else if $swapvar == 12
+	ib = ResourceDilucHeadIB.12
+	ps-t0 = ResourceDilucHeadDiffuse.12
+	ps-t1 = ResourceDilucHeadLightMap.12
+else if $swapvar == 13
+	ib = ResourceDilucHeadIB.13
+	ps-t0 = ResourceDilucHeadDiffuse.13
+	ps-t1 = ResourceDilucHeadLightMap.13
+else if $swapvar == 14
+	ib = ResourceDilucHeadIB.14
+	ps-t0 = ResourceDilucHeadDiffuse.14
+	ps-t1 = ResourceDilucHeadLightMap.14
+else if $swapvar == 15
+	ib = ResourceDilucHeadIB.15
+	ps-t0 = ResourceDilucHeadDiffuse.15
+	ps-t1 = ResourceDilucHeadLightMap.15
+else if $swapvar == 16
+	ib = ResourceDilucHeadIB.16
+	ps-t0 = ResourceDilucHeadDiffuse.16
+	ps-t1 = ResourceDilucHeadLightMap.16
+else if $swapvar == 17
+	ib = ResourceDilucHeadIB.17
+	ps-t0 = ResourceDilucHeadDiffuse.17
+	ps-t1 = ResourceDilucHeadLightMap.17
+else if $swapvar == 18
+	ib = ResourceDilucHeadIB.18
+	ps-t0 = ResourceDilucHeadDiffuse.18
+	ps-t1 = ResourceDilucHeadLightMap.18
+else if $swapvar == 19
+	ib = ResourceDilucHeadIB.19
+	ps-t0 = ResourceDilucHeadDiffuse.19
+	ps-t1 = ResourceDilucHeadLightMap.19
+else if $swapvar == 20
+	ib = ResourceDilucHeadIB.20
+	ps-t0 = ResourceDilucHeadDiffuse.20
+	ps-t1 = ResourceDilucHeadLightMap.20
+endif
+
+[CommandListDilucBody]
+if $swapvar == 0
+	ib = ResourceDilucBodyIB.0
+	ps-t0 = ResourceDilucBodyDiffuse.0
+	ps-t1 = ResourceDilucBodyLightMap.0
+else if $swapvar == 1
+	ib = ResourceDilucBodyIB.1
+	ps-t0 = ResourceDilucBodyDiffuse.1
+	ps-t1 = ResourceDilucBodyLightMap.1
+else if $swapvar == 2
+	ib = ResourceDilucBodyIB.2
+	ps-t0 = ResourceDilucBodyDiffuse.2
+	ps-t1 = ResourceDilucBodyLightMap.2
+else if $swapvar == 3
+	ib = ResourceDilucBodyIB.3
+	ps-t0 = ResourceDilucBodyDiffuse.3
+	ps-t1 = ResourceDilucBodyLightMap.3
+else if $swapvar == 4
+	ib = ResourceDilucBodyIB.4
+	ps-t0 = ResourceDilucBodyDiffuse.4
+	ps-t1 = ResourceDilucBodyLightMap.4
+else if $swapvar == 5
+	ib = ResourceDilucBodyIB.5
+	ps-t0 = ResourceDilucBodyDiffuse.5
+	ps-t1 = ResourceDilucBodyLightMap.5
+else if $swapvar == 6
+	ib = ResourceDilucBodyIB.6
+	ps-t0 = ResourceDilucBodyDiffuse.6
+	ps-t1 = ResourceDilucBodyLightMap.6
+else if $swapvar == 7
+	ib = ResourceDilucBodyIB.7
+	ps-t0 = ResourceDilucBodyDiffuse.7
+	ps-t1 = ResourceDilucBodyLightMap.7
+else if $swapvar == 8
+	ib = ResourceDilucBodyIB.8
+	ps-t0 = ResourceDilucBodyDiffuse.8
+	ps-t1 = ResourceDilucBodyLightMap.8
+else if $swapvar == 9
+	ib = ResourceDilucBodyIB.9
+	ps-t0 = ResourceDilucBodyDiffuse.9
+	ps-t1 = ResourceDilucBodyLightMap.9
+else if $swapvar == 10
+	ib = ResourceDilucBodyIB.10
+	ps-t0 = ResourceDilucBodyDiffuse.10
+	ps-t1 = ResourceDilucBodyLightMap.10
+else if $swapvar == 11
+	ib = ResourceDilucBodyIB.11
+	ps-t0 = ResourceDilucBodyDiffuse.11
+	ps-t1 = ResourceDilucBodyLightMap.11
+else if $swapvar == 12
+	ib = ResourceDilucBodyIB.12
+	ps-t0 = ResourceDilucBodyDiffuse.12
+	ps-t1 = ResourceDilucBodyLightMap.12
+else if $swapvar == 13
+	ib = ResourceDilucBodyIB.13
+	ps-t0 = ResourceDilucBodyDiffuse.13
+	ps-t1 = ResourceDilucBodyLightMap.13
+else if $swapvar == 14
+	ib = ResourceDilucBodyIB.14
+	ps-t0 = ResourceDilucBodyDiffuse.14
+	ps-t1 = ResourceDilucBodyLightMap.14
+else if $swapvar == 15
+	ib = ResourceDilucBodyIB.15
+	ps-t0 = ResourceDilucBodyDiffuse.15
+	ps-t1 = ResourceDilucBodyLightMap.15
+else if $swapvar == 16
+	ib = ResourceDilucBodyIB.16
+	ps-t0 = ResourceDilucBodyDiffuse.16
+	ps-t1 = ResourceDilucBodyLightMap.16
+else if $swapvar == 17
+	ib = ResourceDilucBodyIB.17
+	ps-t0 = ResourceDilucBodyDiffuse.17
+	ps-t1 = ResourceDilucBodyLightMap.17
+else if $swapvar == 18
+	ib = ResourceDilucBodyIB.18
+	ps-t0 = ResourceDilucBodyDiffuse.18
+	ps-t1 = ResourceDilucBodyLightMap.18
+else if $swapvar == 19
+	ib = ResourceDilucBodyIB.19
+	ps-t0 = ResourceDilucBodyDiffuse.19
+	ps-t1 = ResourceDilucBodyLightMap.19
+else if $swapvar == 20
+	ib = ResourceDilucBodyIB.20
+	ps-t0 = ResourceDilucBodyDiffuse.20
+	ps-t1 = ResourceDilucBodyLightMap.20
+endif
+
+[CommandListDilucFaceHeadDiffuse]
+if $swapvar == 0
+	ps-t0 = ResourceDilucFaceHeadDiffuse.0
+else if $swapvar == 1
+	ps-t0 = ResourceDilucFaceHeadDiffuse.1
+else if $swapvar == 2
+	ps-t0 = ResourceDilucFaceHeadDiffuse.2
+else if $swapvar == 3
+	ps-t0 = ResourceDilucFaceHeadDiffuse.3
+else if $swapvar == 4
+	ps-t0 = ResourceDilucFaceHeadDiffuse.4
+else if $swapvar == 5
+	ps-t0 = ResourceDilucFaceHeadDiffuse.5
+else if $swapvar == 6
+	ps-t0 = ResourceDilucFaceHeadDiffuse.6
+else if $swapvar == 7
+	ps-t0 = ResourceDilucFaceHeadDiffuse.7
+else if $swapvar == 8
+	ps-t0 = ResourceDilucFaceHeadDiffuse.8
+else if $swapvar == 9
+	ps-t0 = ResourceDilucFaceHeadDiffuse.9
+else if $swapvar == 10
+	ps-t0 = ResourceDilucFaceHeadDiffuse.10
+else if $swapvar == 11
+	ps-t0 = ResourceDilucFaceHeadDiffuse.11
+else if $swapvar == 12
+	ps-t0 = ResourceDilucFaceHeadDiffuse.12
+else if $swapvar == 13
+	ps-t0 = ResourceDilucFaceHeadDiffuse.13
+else if $swapvar == 14
+	ps-t0 = ResourceDilucFaceHeadDiffuse.14
+else if $swapvar == 15
+	ps-t0 = ResourceDilucFaceHeadDiffuse.15
+else if $swapvar == 16
+	ps-t0 = ResourceDilucFaceHeadDiffuse.16
+else if $swapvar == 17
+	ps-t0 = ResourceDilucFaceHeadDiffuse.17
+else if $swapvar == 18
+	ps-t0 = ResourceDilucFaceHeadDiffuse.18
+else if $swapvar == 19
+	ps-t0 = ResourceDilucFaceHeadDiffuse.19
+else if $swapvar == 20
+	ps-t0 = ResourceDilucFaceHeadDiffuse.20
+endif
+
+; Resources ---------------------------
+
+[ResourceDilucPosition.0]
+type = Buffer
+stride = 40
+filename = .\DilucModf0000\DilucPosition.buf
+
+[ResourceDilucBlend.0]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.0]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.0]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.0]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.0]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.0]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.0]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.0]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.0]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.1]
+type = Buffer
+stride = 40
+filename = .\DilucModf0001\DilucPosition.buf
+
+[ResourceDilucBlend.1]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.1]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.1]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.1]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.1]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.1]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.1]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.1]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.1]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.2]
+type = Buffer
+stride = 40
+filename = .\DilucModf0002\DilucPosition.buf
+
+[ResourceDilucBlend.2]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.2]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.2]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.2]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.2]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.2]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.2]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.2]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.2]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.3]
+type = Buffer
+stride = 40
+filename = .\DilucModf0003\DilucPosition.buf
+
+[ResourceDilucBlend.3]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.3]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.3]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.3]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.3]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.3]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.3]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.3]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.3]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.4]
+type = Buffer
+stride = 40
+filename = .\DilucModf0004\DilucPosition.buf
+
+[ResourceDilucBlend.4]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.4]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.4]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.4]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.4]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.4]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.4]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.4]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.4]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.5]
+type = Buffer
+stride = 40
+filename = .\DilucModf0005\DilucPosition.buf
+
+[ResourceDilucBlend.5]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.5]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.5]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.5]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.5]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.5]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.5]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.5]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.5]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.6]
+type = Buffer
+stride = 40
+filename = .\DilucModf0006\DilucPosition.buf
+
+[ResourceDilucBlend.6]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.6]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.6]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.6]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.6]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.6]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.6]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.6]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.6]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.7]
+type = Buffer
+stride = 40
+filename = .\DilucModf0007\DilucPosition.buf
+
+[ResourceDilucBlend.7]
+type = Buffer
+stride = 32
+filename = .\DilucModf0007\DilucBlend.buf
+
+[ResourceDilucTexcoord.7]
+type = Buffer
+stride = 12
+filename = .\DilucModf0007\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.7]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.7]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0007\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.7]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.7]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.7]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.7]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.7]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.8]
+type = Buffer
+stride = 40
+filename = .\DilucModf0008\DilucPosition.buf
+
+[ResourceDilucBlend.8]
+type = Buffer
+stride = 32
+filename = .\DilucModf0007\DilucBlend.buf
+
+[ResourceDilucTexcoord.8]
+type = Buffer
+stride = 12
+filename = .\DilucModf0007\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.8]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.8]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0007\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.8]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.8]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.8]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.8]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.8]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.9]
+type = Buffer
+stride = 40
+filename = .\DilucModf0009\DilucPosition.buf
+
+[ResourceDilucBlend.9]
+type = Buffer
+stride = 32
+filename = .\DilucModf0007\DilucBlend.buf
+
+[ResourceDilucTexcoord.9]
+type = Buffer
+stride = 12
+filename = .\DilucModf0007\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.9]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.9]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0007\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.9]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.9]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.9]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.9]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.9]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.10]
+type = Buffer
+stride = 40
+filename = .\DilucModf0010\DilucPosition.buf
+
+[ResourceDilucBlend.10]
+type = Buffer
+stride = 32
+filename = .\DilucModf0007\DilucBlend.buf
+
+[ResourceDilucTexcoord.10]
+type = Buffer
+stride = 12
+filename = .\DilucModf0007\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.10]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.10]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0007\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.10]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.10]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.10]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.10]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.10]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.11]
+type = Buffer
+stride = 40
+filename = .\DilucModf0011\DilucPosition.buf
+
+[ResourceDilucBlend.11]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.11]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.11]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.11]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.11]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.11]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.11]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.11]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.11]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.12]
+type = Buffer
+stride = 40
+filename = .\DilucModf0012\DilucPosition.buf
+
+[ResourceDilucBlend.12]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.12]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.12]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.12]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.12]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.12]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.12]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.12]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.12]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.13]
+type = Buffer
+stride = 40
+filename = .\DilucModf0013\DilucPosition.buf
+
+[ResourceDilucBlend.13]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.13]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.13]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.13]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.13]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.13]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.13]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.13]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.13]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.14]
+type = Buffer
+stride = 40
+filename = .\DilucModf0014\DilucPosition.buf
+
+[ResourceDilucBlend.14]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.14]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.14]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.14]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.14]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.14]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.14]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.14]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.14]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.15]
+type = Buffer
+stride = 40
+filename = .\DilucModf0015\DilucPosition.buf
+
+[ResourceDilucBlend.15]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.15]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.15]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.15]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.15]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.15]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.15]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.15]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.15]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.16]
+type = Buffer
+stride = 40
+filename = .\DilucModf0016\DilucPosition.buf
+
+[ResourceDilucBlend.16]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.16]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.16]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.16]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.16]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.16]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.16]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.16]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.16]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.17]
+type = Buffer
+stride = 40
+filename = .\DilucModf0017\DilucPosition.buf
+
+[ResourceDilucBlend.17]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.17]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.17]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.17]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.17]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.17]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.17]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.17]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.17]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.18]
+type = Buffer
+stride = 40
+filename = .\DilucModf0018\DilucPosition.buf
+
+[ResourceDilucBlend.18]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.18]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.18]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.18]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.18]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.18]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.18]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.18]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.18]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.19]
+type = Buffer
+stride = 40
+filename = .\DilucModf0019\DilucPosition.buf
+
+[ResourceDilucBlend.19]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.19]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.19]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.19]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.19]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.19]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.19]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.19]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.19]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+[ResourceDilucPosition.20]
+type = Buffer
+stride = 40
+filename = .\DilucModf0020\DilucPosition.buf
+
+[ResourceDilucBlend.20]
+type = Buffer
+stride = 32
+filename = .\DilucModf0000\DilucBlend.buf
+
+[ResourceDilucTexcoord.20]
+type = Buffer
+stride = 12
+filename = .\DilucModf0000\DilucTexcoord.buf
+
+[ResourceDilucHeadIB.20]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucHead.ib
+
+[ResourceDilucBodyIB.20]
+type = Buffer
+format = DXGI_FORMAT_R32_UINT
+filename = .\DilucModf0000\DilucBody.ib
+
+[ResourceDilucHeadDiffuse.20]
+filename = .\DilucModf0000\DilucHeadDiffuse.dds
+
+[ResourceDilucHeadLightMap.20]
+filename = .\DilucModf0000\DilucHeadLightMap.dds
+
+[ResourceDilucBodyDiffuse.20]
+filename = .\DilucModf0000\DilucBodyDiffuse.dds
+
+[ResourceDilucBodyLightMap.20]
+filename = .\DilucModf0000\DilucBodyLightMap.dds
+
+[ResourceDilucFaceHeadDiffuse.20]
+filename = .\DilucModf0000\DilucFaceHeadDiffuse.dds
+
+
+
+; .ini generated by GIMI (Genshin-Impact-Model-Importer) mod merger script
+; If you have any issues or find any bugs, please open a ticket at https://github.com/SilentNightSound/GI-Model-Importer/issues or contact SilentNightSound#7430 on discord
+
+; 4.1 Character Fix 
+[TextureOverride41FixVertexLimitRaise0]
+hash = dff0b253
+match_priority = 1
