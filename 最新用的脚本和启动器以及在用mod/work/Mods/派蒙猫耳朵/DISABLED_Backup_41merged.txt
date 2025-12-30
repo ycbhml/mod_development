@@ -1,0 +1,1656 @@
+; Merged Mod: .\PaimonMod00_Normal\Paimon.ini, .\PaimonMod01_NoShoes\Paimon.ini, .\PaimonMod02_NoGloves\Paimon.ini, .\PaimonMod03_NoCloak\Paimon.ini, .\PaimonMod04_NoHalo\Paimon.ini, .\PaimonMod05_NoShoesNoGloves\Paimon.ini, .\PaimonMod06_NoShoesNoCloak\Paimon.ini, .\PaimonMod07_NoShoesNoHalo\Paimon.ini, .\PaimonMod08_NoGlovesNoCloak\Paimon.ini, .\PaimonMod09_NoGlovesNoHalo\Paimon.ini, .\PaimonMod10_NoCloakNoHalo\Paimon.ini, .\PaimonMod11_NoShoesNoGlovesNoCloak\Paimon.ini, .\PaimonMod12_NoShoesNoGlovesNoHalo\Paimon.ini, .\PaimonMod13_NoShoesNoCloakNoHalo\Paimon.ini, .\PaimonMod14_NoGlovesNoCloakNoHalo\Paimon.ini, .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\Paimon.ini
+
+; Constants ---------------------------
+
+[Constants]
+global persist $swapvar = 0
+global $ActiveCharacter = 0
+
+[KeySwap]
+condition = $ActiveCharacter == 1
+key = ctrl no_shift no_alt p
+back = ctrl shift no_alt p
+type = cycle
+$swapvar = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+
+[Present]
+post $ActiveCharacter = 0
+
+; Overrides ---------------------------
+
+[TextureOverridePaimonPosition]
+hash = 1f7f0600
+run = CommandListPaimonPosition
+$ActiveCharacter = 1
+
+[TextureOverridePaimonBlend]
+hash = e70695e0
+run = CommandListPaimonBlend
+
+[TextureOverridePaimonTexcoord]
+hash = ce8cbdfb
+run = CommandListPaimonTexcoord
+
+[TextureOverridePaimonVertexLimitRaise]
+hash = 0028d4d1
+
+[TextureOverridePaimonIB]
+hash = 6398b643
+run = CommandListPaimonIB
+
+[TextureOverridePaimonHead]
+hash = 6398b643
+match_first_index = 0
+run = CommandListPaimonHead
+
+[TextureOverridePaimonBody]
+hash = 6398b643
+match_first_index = 26226
+run = CommandListPaimonBody
+
+[TextureOverridePaimonFaceHeadDiffuse]
+hash = b0c244f8
+run = CommandListPaimonFaceHeadDiffuse
+
+[TextureOverridePaimonCloakPosition]
+hash = 1a09e6cd
+run = CommandListPaimonCloakPosition
+$ActiveCharacter = 1
+
+[TextureOverridePaimonCloakBlend]
+hash = ba99977e
+run = CommandListPaimonCloakBlend
+
+[TextureOverridePaimonCloakTexcoord]
+hash = c1b3fa02
+run = CommandListPaimonCloakTexcoord
+
+[TextureOverridePaimonCloakVertexLimitRaise]
+hash = cb027e67
+
+[TextureOverridePaimonCloakIB]
+hash = f218fa82
+run = CommandListPaimonCloakIB
+
+[TextureOverridePaimonCloakHead]
+hash = f218fa82
+match_first_index = 0
+run = CommandListPaimonCloakHead
+
+; CommandList -------------------------
+
+[CommandListPaimonPosition]
+if $swapvar == 0
+	vb0 = ResourcePaimonPosition.0
+else if $swapvar == 1
+	vb0 = ResourcePaimonPosition.1
+else if $swapvar == 2
+	vb0 = ResourcePaimonPosition.2
+else if $swapvar == 3
+	vb0 = ResourcePaimonPosition.3
+else if $swapvar == 4
+	vb0 = ResourcePaimonPosition.4
+else if $swapvar == 5
+	vb0 = ResourcePaimonPosition.5
+else if $swapvar == 6
+	vb0 = ResourcePaimonPosition.6
+else if $swapvar == 7
+	vb0 = ResourcePaimonPosition.7
+else if $swapvar == 8
+	vb0 = ResourcePaimonPosition.8
+else if $swapvar == 9
+	vb0 = ResourcePaimonPosition.9
+else if $swapvar == 10
+	vb0 = ResourcePaimonPosition.10
+else if $swapvar == 11
+	vb0 = ResourcePaimonPosition.11
+else if $swapvar == 12
+	vb0 = ResourcePaimonPosition.12
+else if $swapvar == 13
+	vb0 = ResourcePaimonPosition.13
+else if $swapvar == 14
+	vb0 = ResourcePaimonPosition.14
+else if $swapvar == 15
+	vb0 = ResourcePaimonPosition.15
+endif
+
+[CommandListPaimonBlend]
+if $swapvar == 0
+	vb1 = ResourcePaimonBlend.0
+	handling = skip
+	draw = 9285,0
+else if $swapvar == 1
+	vb1 = ResourcePaimonBlend.1
+	handling = skip
+	draw = 12043,0
+else if $swapvar == 2
+	vb1 = ResourcePaimonBlend.2
+	handling = skip
+	draw = 11021,0
+else if $swapvar == 3
+	vb1 = ResourcePaimonBlend.3
+	handling = skip
+	draw = 9285,0
+else if $swapvar == 4
+	vb1 = ResourcePaimonBlend.4
+	handling = skip
+	draw = 8773,0
+else if $swapvar == 5
+	vb1 = ResourcePaimonBlend.5
+	handling = skip
+	draw = 13779,0
+else if $swapvar == 6
+	vb1 = ResourcePaimonBlend.6
+	handling = skip
+	draw = 12043,0
+else if $swapvar == 7
+	vb1 = ResourcePaimonBlend.7
+	handling = skip
+	draw = 11531,0
+else if $swapvar == 8
+	vb1 = ResourcePaimonBlend.8
+	handling = skip
+	draw = 11021,0
+else if $swapvar == 9
+	vb1 = ResourcePaimonBlend.9
+	handling = skip
+	draw = 10509,0
+else if $swapvar == 10
+	vb1 = ResourcePaimonBlend.10
+	handling = skip
+	draw = 8773,0
+else if $swapvar == 11
+	vb1 = ResourcePaimonBlend.11
+	handling = skip
+	draw = 13779,0
+else if $swapvar == 12
+	vb1 = ResourcePaimonBlend.12
+	handling = skip
+	draw = 13267,0
+else if $swapvar == 13
+	vb1 = ResourcePaimonBlend.13
+	handling = skip
+	draw = 11531,0
+else if $swapvar == 14
+	vb1 = ResourcePaimonBlend.14
+	handling = skip
+	draw = 10509,0
+else if $swapvar == 15
+	vb1 = ResourcePaimonBlend.15
+	handling = skip
+	draw = 13267,0
+endif
+
+[CommandListPaimonTexcoord]
+if $swapvar == 0
+	vb1 = ResourcePaimonTexcoord.0
+else if $swapvar == 1
+	vb1 = ResourcePaimonTexcoord.1
+else if $swapvar == 2
+	vb1 = ResourcePaimonTexcoord.2
+else if $swapvar == 3
+	vb1 = ResourcePaimonTexcoord.3
+else if $swapvar == 4
+	vb1 = ResourcePaimonTexcoord.4
+else if $swapvar == 5
+	vb1 = ResourcePaimonTexcoord.5
+else if $swapvar == 6
+	vb1 = ResourcePaimonTexcoord.6
+else if $swapvar == 7
+	vb1 = ResourcePaimonTexcoord.7
+else if $swapvar == 8
+	vb1 = ResourcePaimonTexcoord.8
+else if $swapvar == 9
+	vb1 = ResourcePaimonTexcoord.9
+else if $swapvar == 10
+	vb1 = ResourcePaimonTexcoord.10
+else if $swapvar == 11
+	vb1 = ResourcePaimonTexcoord.11
+else if $swapvar == 12
+	vb1 = ResourcePaimonTexcoord.12
+else if $swapvar == 13
+	vb1 = ResourcePaimonTexcoord.13
+else if $swapvar == 14
+	vb1 = ResourcePaimonTexcoord.14
+else if $swapvar == 15
+	vb1 = ResourcePaimonTexcoord.15
+endif
+
+[CommandListPaimonIB]
+if $swapvar == 0
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 1
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 2
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 3
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 4
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 5
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 6
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 7
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 8
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 9
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 10
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 11
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 12
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 13
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 14
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 15
+	handling = skip
+	drawindexed = auto
+endif
+
+[CommandListPaimonHead]
+if $swapvar == 0
+	ib = ResourcePaimonHeadIB.0
+	ps-t0 = ResourcePaimonHeadDiffuse.0
+	ps-t1 = ResourcePaimonHeadLightMap.0
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.0
+	ps-t3 = ResourcePaimonHeadShadowRamp.0
+else if $swapvar == 1
+	ib = ResourcePaimonHeadIB.1
+	ps-t0 = ResourcePaimonHeadDiffuse.1
+	ps-t1 = ResourcePaimonHeadLightMap.1
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.1
+	ps-t3 = ResourcePaimonHeadShadowRamp.1
+else if $swapvar == 2
+	ib = ResourcePaimonHeadIB.2
+	ps-t0 = ResourcePaimonHeadDiffuse.2
+	ps-t1 = ResourcePaimonHeadLightMap.2
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.2
+	ps-t3 = ResourcePaimonHeadShadowRamp.2
+else if $swapvar == 3
+	ib = ResourcePaimonHeadIB.3
+	ps-t0 = ResourcePaimonHeadDiffuse.3
+	ps-t1 = ResourcePaimonHeadLightMap.3
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.3
+	ps-t3 = ResourcePaimonHeadShadowRamp.3
+else if $swapvar == 4
+	ib = ResourcePaimonHeadIB.4
+	ps-t0 = ResourcePaimonHeadDiffuse.4
+	ps-t1 = ResourcePaimonHeadLightMap.4
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.4
+	ps-t3 = ResourcePaimonHeadShadowRamp.4
+else if $swapvar == 5
+	ib = ResourcePaimonHeadIB.5
+	ps-t0 = ResourcePaimonHeadDiffuse.5
+	ps-t1 = ResourcePaimonHeadLightMap.5
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.5
+	ps-t3 = ResourcePaimonHeadShadowRamp.5
+else if $swapvar == 6
+	ib = ResourcePaimonHeadIB.6
+	ps-t0 = ResourcePaimonHeadDiffuse.6
+	ps-t1 = ResourcePaimonHeadLightMap.6
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.6
+	ps-t3 = ResourcePaimonHeadShadowRamp.6
+else if $swapvar == 7
+	ib = ResourcePaimonHeadIB.7
+	ps-t0 = ResourcePaimonHeadDiffuse.7
+	ps-t1 = ResourcePaimonHeadLightMap.7
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.7
+	ps-t3 = ResourcePaimonHeadShadowRamp.7
+else if $swapvar == 8
+	ib = ResourcePaimonHeadIB.8
+	ps-t0 = ResourcePaimonHeadDiffuse.8
+	ps-t1 = ResourcePaimonHeadLightMap.8
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.8
+	ps-t3 = ResourcePaimonHeadShadowRamp.8
+else if $swapvar == 9
+	ib = ResourcePaimonHeadIB.9
+	ps-t0 = ResourcePaimonHeadDiffuse.9
+	ps-t1 = ResourcePaimonHeadLightMap.9
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.9
+	ps-t3 = ResourcePaimonHeadShadowRamp.9
+else if $swapvar == 10
+	ib = ResourcePaimonHeadIB.10
+	ps-t0 = ResourcePaimonHeadDiffuse.10
+	ps-t1 = ResourcePaimonHeadLightMap.10
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.10
+	ps-t3 = ResourcePaimonHeadShadowRamp.10
+else if $swapvar == 11
+	ib = ResourcePaimonHeadIB.11
+	ps-t0 = ResourcePaimonHeadDiffuse.11
+	ps-t1 = ResourcePaimonHeadLightMap.11
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.11
+	ps-t3 = ResourcePaimonHeadShadowRamp.11
+else if $swapvar == 12
+	ib = ResourcePaimonHeadIB.12
+	ps-t0 = ResourcePaimonHeadDiffuse.12
+	ps-t1 = ResourcePaimonHeadLightMap.12
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.12
+	ps-t3 = ResourcePaimonHeadShadowRamp.12
+else if $swapvar == 13
+	ib = ResourcePaimonHeadIB.13
+	ps-t0 = ResourcePaimonHeadDiffuse.13
+	ps-t1 = ResourcePaimonHeadLightMap.13
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.13
+	ps-t3 = ResourcePaimonHeadShadowRamp.13
+else if $swapvar == 14
+	ib = ResourcePaimonHeadIB.14
+	ps-t0 = ResourcePaimonHeadDiffuse.14
+	ps-t1 = ResourcePaimonHeadLightMap.14
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.14
+	ps-t3 = ResourcePaimonHeadShadowRamp.14
+else if $swapvar == 15
+	ib = ResourcePaimonHeadIB.15
+	ps-t0 = ResourcePaimonHeadDiffuse.15
+	ps-t1 = ResourcePaimonHeadLightMap.15
+	ps-t2 = ResourcePaimonHeadDiffuseGuide.15
+	ps-t3 = ResourcePaimonHeadShadowRamp.15
+endif
+
+[CommandListPaimonBody]
+if $swapvar == 0
+	ib = ResourcePaimonBodyIB.0
+	ps-t0 = ResourcePaimonBodyDiffuse.0
+	ps-t1 = ResourcePaimonBodyLightMap.0
+	ps-t2 = ResourcePaimonBodyShadowRamp.0
+else if $swapvar == 1
+	ib = ResourcePaimonBodyIB.1
+	ps-t0 = ResourcePaimonBodyDiffuse.1
+	ps-t1 = ResourcePaimonBodyLightMap.1
+	ps-t2 = ResourcePaimonBodyShadowRamp.1
+else if $swapvar == 2
+	ib = ResourcePaimonBodyIB.2
+	ps-t0 = ResourcePaimonBodyDiffuse.2
+	ps-t1 = ResourcePaimonBodyLightMap.2
+	ps-t2 = ResourcePaimonBodyShadowRamp.2
+else if $swapvar == 3
+	ib = ResourcePaimonBodyIB.3
+	ps-t0 = ResourcePaimonBodyDiffuse.3
+	ps-t1 = ResourcePaimonBodyLightMap.3
+	ps-t2 = ResourcePaimonBodyShadowRamp.3
+else if $swapvar == 4
+	ib = ResourcePaimonBodyIB.4
+	ps-t0 = ResourcePaimonBodyDiffuse.4
+	ps-t1 = ResourcePaimonBodyLightMap.4
+	ps-t2 = ResourcePaimonBodyShadowRamp.4
+else if $swapvar == 5
+	ib = ResourcePaimonBodyIB.5
+	ps-t0 = ResourcePaimonBodyDiffuse.5
+	ps-t1 = ResourcePaimonBodyLightMap.5
+	ps-t2 = ResourcePaimonBodyShadowRamp.5
+else if $swapvar == 6
+	ib = ResourcePaimonBodyIB.6
+	ps-t0 = ResourcePaimonBodyDiffuse.6
+	ps-t1 = ResourcePaimonBodyLightMap.6
+	ps-t2 = ResourcePaimonBodyShadowRamp.6
+else if $swapvar == 7
+	ib = ResourcePaimonBodyIB.7
+	ps-t0 = ResourcePaimonBodyDiffuse.7
+	ps-t1 = ResourcePaimonBodyLightMap.7
+	ps-t2 = ResourcePaimonBodyShadowRamp.7
+else if $swapvar == 8
+	ib = ResourcePaimonBodyIB.8
+	ps-t0 = ResourcePaimonBodyDiffuse.8
+	ps-t1 = ResourcePaimonBodyLightMap.8
+	ps-t2 = ResourcePaimonBodyShadowRamp.8
+else if $swapvar == 9
+	ib = ResourcePaimonBodyIB.9
+	ps-t0 = ResourcePaimonBodyDiffuse.9
+	ps-t1 = ResourcePaimonBodyLightMap.9
+	ps-t2 = ResourcePaimonBodyShadowRamp.9
+else if $swapvar == 10
+	ib = ResourcePaimonBodyIB.10
+	ps-t0 = ResourcePaimonBodyDiffuse.10
+	ps-t1 = ResourcePaimonBodyLightMap.10
+	ps-t2 = ResourcePaimonBodyShadowRamp.10
+else if $swapvar == 11
+	ib = ResourcePaimonBodyIB.11
+	ps-t0 = ResourcePaimonBodyDiffuse.11
+	ps-t1 = ResourcePaimonBodyLightMap.11
+	ps-t2 = ResourcePaimonBodyShadowRamp.11
+else if $swapvar == 12
+	ib = ResourcePaimonBodyIB.12
+	ps-t0 = ResourcePaimonBodyDiffuse.12
+	ps-t1 = ResourcePaimonBodyLightMap.12
+	ps-t2 = ResourcePaimonBodyShadowRamp.12
+else if $swapvar == 13
+	ib = ResourcePaimonBodyIB.13
+	ps-t0 = ResourcePaimonBodyDiffuse.13
+	ps-t1 = ResourcePaimonBodyLightMap.13
+	ps-t2 = ResourcePaimonBodyShadowRamp.13
+else if $swapvar == 14
+	ib = ResourcePaimonBodyIB.14
+	ps-t0 = ResourcePaimonBodyDiffuse.14
+	ps-t1 = ResourcePaimonBodyLightMap.14
+	ps-t2 = ResourcePaimonBodyShadowRamp.14
+else if $swapvar == 15
+	ib = ResourcePaimonBodyIB.15
+	ps-t0 = ResourcePaimonBodyDiffuse.15
+	ps-t1 = ResourcePaimonBodyLightMap.15
+	ps-t2 = ResourcePaimonBodyShadowRamp.15
+endif
+
+[CommandListPaimonFaceHeadDiffuse]
+if $swapvar == 0
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.0
+else if $swapvar == 1
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.1
+else if $swapvar == 2
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.2
+else if $swapvar == 3
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.3
+else if $swapvar == 4
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.4
+else if $swapvar == 5
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.5
+else if $swapvar == 6
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.6
+else if $swapvar == 7
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.7
+else if $swapvar == 8
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.8
+else if $swapvar == 9
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.9
+else if $swapvar == 10
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.10
+else if $swapvar == 11
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.11
+else if $swapvar == 12
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.12
+else if $swapvar == 13
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.13
+else if $swapvar == 14
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.14
+else if $swapvar == 15
+	ps-t0 = ResourcePaimonFaceHeadDiffuse.15
+endif
+
+[CommandListPaimonCloakPosition]
+if $swapvar == 3
+	vb0 = ResourcePaimonCloakPosition.3
+else if $swapvar == 6
+	vb0 = ResourcePaimonCloakPosition.6
+else if $swapvar == 8
+	vb0 = ResourcePaimonCloakPosition.8
+else if $swapvar == 10
+	vb0 = ResourcePaimonCloakPosition.10
+else if $swapvar == 11
+	vb0 = ResourcePaimonCloakPosition.11
+else if $swapvar == 13
+	vb0 = ResourcePaimonCloakPosition.13
+else if $swapvar == 14
+	vb0 = ResourcePaimonCloakPosition.14
+else if $swapvar == 15
+	vb0 = ResourcePaimonCloakPosition.15
+endif
+
+[CommandListPaimonCloakBlend]
+if $swapvar == 3
+	vb1 = ResourcePaimonCloakBlend.3
+	handling = skip
+	draw = 3,0
+else if $swapvar == 6
+	vb1 = ResourcePaimonCloakBlend.6
+	handling = skip
+	draw = 3,0
+else if $swapvar == 8
+	vb1 = ResourcePaimonCloakBlend.8
+	handling = skip
+	draw = 3,0
+else if $swapvar == 10
+	vb1 = ResourcePaimonCloakBlend.10
+	handling = skip
+	draw = 3,0
+else if $swapvar == 11
+	vb1 = ResourcePaimonCloakBlend.11
+	handling = skip
+	draw = 3,0
+else if $swapvar == 13
+	vb1 = ResourcePaimonCloakBlend.13
+	handling = skip
+	draw = 3,0
+else if $swapvar == 14
+	vb1 = ResourcePaimonCloakBlend.14
+	handling = skip
+	draw = 3,0
+else if $swapvar == 15
+	vb1 = ResourcePaimonCloakBlend.15
+	handling = skip
+	draw = 3,0
+endif
+
+[CommandListPaimonCloakTexcoord]
+if $swapvar == 3
+	vb1 = ResourcePaimonCloakTexcoord.3
+else if $swapvar == 6
+	vb1 = ResourcePaimonCloakTexcoord.6
+else if $swapvar == 8
+	vb1 = ResourcePaimonCloakTexcoord.8
+else if $swapvar == 10
+	vb1 = ResourcePaimonCloakTexcoord.10
+else if $swapvar == 11
+	vb1 = ResourcePaimonCloakTexcoord.11
+else if $swapvar == 13
+	vb1 = ResourcePaimonCloakTexcoord.13
+else if $swapvar == 14
+	vb1 = ResourcePaimonCloakTexcoord.14
+else if $swapvar == 15
+	vb1 = ResourcePaimonCloakTexcoord.15
+endif
+
+[CommandListPaimonCloakIB]
+if $swapvar == 3
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 6
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 8
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 10
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 11
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 13
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 14
+	handling = skip
+	drawindexed = auto
+else if $swapvar == 15
+	handling = skip
+	drawindexed = auto
+endif
+
+[CommandListPaimonCloakHead]
+if $swapvar == 3
+	ib = ResourcePaimonCloakHeadIB.3
+	ps-t0 = ResourcePaimonCloakHeadDiffuse.3
+	ps-t1 = ResourcePaimonCloakHeadLightMap.3
+	ps-t2 = ResourcePaimonCloakHeadShadowRamp.3
+else if $swapvar == 6
+	ib = ResourcePaimonCloakHeadIB.6
+	ps-t0 = ResourcePaimonCloakHeadDiffuse.6
+	ps-t1 = ResourcePaimonCloakHeadLightMap.6
+	ps-t2 = ResourcePaimonCloakHeadShadowRamp.6
+else if $swapvar == 8
+	ib = ResourcePaimonCloakHeadIB.8
+	ps-t0 = ResourcePaimonCloakHeadDiffuse.8
+	ps-t1 = ResourcePaimonCloakHeadLightMap.8
+	ps-t2 = ResourcePaimonCloakHeadShadowRamp.8
+else if $swapvar == 10
+	ib = ResourcePaimonCloakHeadIB.10
+	ps-t0 = ResourcePaimonCloakHeadDiffuse.10
+	ps-t1 = ResourcePaimonCloakHeadLightMap.10
+	ps-t2 = ResourcePaimonCloakHeadShadowRamp.10
+else if $swapvar == 11
+	ib = ResourcePaimonCloakHeadIB.11
+	ps-t0 = ResourcePaimonCloakHeadDiffuse.11
+	ps-t1 = ResourcePaimonCloakHeadLightMap.11
+	ps-t2 = ResourcePaimonCloakHeadShadowRamp.11
+else if $swapvar == 13
+	ib = ResourcePaimonCloakHeadIB.13
+	ps-t0 = ResourcePaimonCloakHeadDiffuse.13
+	ps-t1 = ResourcePaimonCloakHeadLightMap.13
+	ps-t2 = ResourcePaimonCloakHeadShadowRamp.13
+else if $swapvar == 14
+	ib = ResourcePaimonCloakHeadIB.14
+	ps-t0 = ResourcePaimonCloakHeadDiffuse.14
+	ps-t1 = ResourcePaimonCloakHeadLightMap.14
+	ps-t2 = ResourcePaimonCloakHeadShadowRamp.14
+else if $swapvar == 15
+	ib = ResourcePaimonCloakHeadIB.15
+	ps-t0 = ResourcePaimonCloakHeadDiffuse.15
+	ps-t1 = ResourcePaimonCloakHeadLightMap.15
+	ps-t2 = ResourcePaimonCloakHeadShadowRamp.15
+endif
+
+; Resources ---------------------------
+
+[ResourcePaimonPosition.0]
+type = Buffer
+stride = 40
+filename = .\PaimonMod00_Normal\PaimonPosition.buf
+
+[ResourcePaimonBlend.0]
+type = Buffer
+stride = 32
+filename = .\PaimonMod00_Normal\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.0]
+type = Buffer
+stride = 20
+filename = .\PaimonMod00_Normal\PaimonTexcoord.buf
+
+[ResourcePaimonHeadIB.0]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod00_Normal\PaimonHead.ib
+
+[ResourcePaimonBodyIB.0]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod00_Normal\PaimonBody.ib
+
+[ResourcePaimonHeadDiffuse.0]
+filename = .\PaimonMod00_Normal\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.0]
+filename = .\PaimonMod00_Normal\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.0]
+filename = .\PaimonMod00_Normal\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.0]
+filename = .\PaimonMod00_Normal\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.0]
+filename = .\PaimonMod00_Normal\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.0]
+filename = .\PaimonMod00_Normal\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.0]
+filename = .\PaimonMod00_Normal\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.0]
+filename = .\PaimonMod00_Normal\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.1]
+type = Buffer
+stride = 40
+filename = .\PaimonMod01_NoShoes\PaimonPosition.buf
+
+[ResourcePaimonBlend.1]
+type = Buffer
+stride = 32
+filename = .\PaimonMod01_NoShoes\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.1]
+type = Buffer
+stride = 20
+filename = .\PaimonMod01_NoShoes\PaimonTexcoord.buf
+
+[ResourcePaimonHeadIB.1]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod01_NoShoes\PaimonHead.ib
+
+[ResourcePaimonBodyIB.1]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod01_NoShoes\PaimonBody.ib
+
+[ResourcePaimonHeadDiffuse.1]
+filename = .\PaimonMod01_NoShoes\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.1]
+filename = .\PaimonMod01_NoShoes\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.1]
+filename = .\PaimonMod01_NoShoes\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.1]
+filename = .\PaimonMod01_NoShoes\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.1]
+filename = .\PaimonMod01_NoShoes\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.1]
+filename = .\PaimonMod01_NoShoes\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.1]
+filename = .\PaimonMod01_NoShoes\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.1]
+filename = .\PaimonMod01_NoShoes\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.2]
+type = Buffer
+stride = 40
+filename = .\PaimonMod02_NoGloves\PaimonPosition.buf
+
+[ResourcePaimonBlend.2]
+type = Buffer
+stride = 32
+filename = .\PaimonMod02_NoGloves\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.2]
+type = Buffer
+stride = 20
+filename = .\PaimonMod02_NoGloves\PaimonTexcoord.buf
+
+[ResourcePaimonHeadIB.2]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod02_NoGloves\PaimonHead.ib
+
+[ResourcePaimonBodyIB.2]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod02_NoGloves\PaimonBody.ib
+
+[ResourcePaimonHeadDiffuse.2]
+filename = .\PaimonMod02_NoGloves\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.2]
+filename = .\PaimonMod02_NoGloves\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.2]
+filename = .\PaimonMod02_NoGloves\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.2]
+filename = .\PaimonMod02_NoGloves\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.2]
+filename = .\PaimonMod02_NoGloves\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.2]
+filename = .\PaimonMod02_NoGloves\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.2]
+filename = .\PaimonMod02_NoGloves\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.2]
+filename = .\PaimonMod02_NoGloves\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.3]
+type = Buffer
+stride = 40
+filename = .\PaimonMod03_NoCloak\PaimonPosition.buf
+
+[ResourcePaimonBlend.3]
+type = Buffer
+stride = 32
+filename = .\PaimonMod03_NoCloak\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.3]
+type = Buffer
+stride = 20
+filename = .\PaimonMod03_NoCloak\PaimonTexcoord.buf
+
+[ResourcePaimonCloakPosition.3]
+type = Buffer
+stride = 40
+filename = .\PaimonMod03_NoCloak\PaimonCloakPosition.buf
+
+[ResourcePaimonCloakBlend.3]
+type = Buffer
+stride = 32
+filename = .\PaimonMod03_NoCloak\PaimonCloakBlend.buf
+
+[ResourcePaimonCloakTexcoord.3]
+type = Buffer
+stride = 8
+filename = .\PaimonMod03_NoCloak\PaimonCloakTexcoord.buf
+
+[ResourcePaimonHeadIB.3]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod03_NoCloak\PaimonHead.ib
+
+[ResourcePaimonBodyIB.3]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod03_NoCloak\PaimonBody.ib
+
+[ResourcePaimonCloakHeadIB.3]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod03_NoCloak\PaimonCloakHead.ib
+
+[ResourcePaimonHeadDiffuse.3]
+filename = .\PaimonMod03_NoCloak\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.3]
+filename = .\PaimonMod03_NoCloak\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.3]
+filename = .\PaimonMod03_NoCloak\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.3]
+filename = .\PaimonMod03_NoCloak\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.3]
+filename = .\PaimonMod03_NoCloak\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.3]
+filename = .\PaimonMod03_NoCloak\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.3]
+filename = .\PaimonMod03_NoCloak\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonCloakHeadDiffuse.3]
+filename = .\PaimonMod03_NoCloak\PaimonCloakHeadDiffuse.dds
+
+[ResourcePaimonCloakHeadLightMap.3]
+filename = .\PaimonMod03_NoCloak\PaimonCloakHeadLightMap.dds
+
+[ResourcePaimonCloakHeadShadowRamp.3]
+filename = .\PaimonMod03_NoCloak\PaimonCloakHeadShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.3]
+filename = .\PaimonMod03_NoCloak\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.4]
+type = Buffer
+stride = 40
+filename = .\PaimonMod04_NoHalo\PaimonPosition.buf
+
+[ResourcePaimonBlend.4]
+type = Buffer
+stride = 32
+filename = .\PaimonMod04_NoHalo\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.4]
+type = Buffer
+stride = 20
+filename = .\PaimonMod04_NoHalo\PaimonTexcoord.buf
+
+[ResourcePaimonHeadIB.4]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod04_NoHalo\PaimonHead.ib
+
+[ResourcePaimonBodyIB.4]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod04_NoHalo\PaimonBody.ib
+
+[ResourcePaimonHeadDiffuse.4]
+filename = .\PaimonMod04_NoHalo\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.4]
+filename = .\PaimonMod04_NoHalo\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.4]
+filename = .\PaimonMod04_NoHalo\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.4]
+filename = .\PaimonMod04_NoHalo\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.4]
+filename = .\PaimonMod04_NoHalo\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.4]
+filename = .\PaimonMod04_NoHalo\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.4]
+filename = .\PaimonMod04_NoHalo\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.4]
+filename = .\PaimonMod04_NoHalo\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.5]
+type = Buffer
+stride = 40
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonPosition.buf
+
+[ResourcePaimonBlend.5]
+type = Buffer
+stride = 32
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.5]
+type = Buffer
+stride = 20
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonTexcoord.buf
+
+[ResourcePaimonHeadIB.5]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonHead.ib
+
+[ResourcePaimonBodyIB.5]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonBody.ib
+
+[ResourcePaimonHeadDiffuse.5]
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.5]
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.5]
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.5]
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.5]
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.5]
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.5]
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.5]
+filename = .\PaimonMod05_NoShoesNoGloves\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.6]
+type = Buffer
+stride = 40
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonPosition.buf
+
+[ResourcePaimonBlend.6]
+type = Buffer
+stride = 32
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.6]
+type = Buffer
+stride = 20
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonTexcoord.buf
+
+[ResourcePaimonCloakPosition.6]
+type = Buffer
+stride = 40
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonCloakPosition.buf
+
+[ResourcePaimonCloakBlend.6]
+type = Buffer
+stride = 32
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonCloakBlend.buf
+
+[ResourcePaimonCloakTexcoord.6]
+type = Buffer
+stride = 8
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonCloakTexcoord.buf
+
+[ResourcePaimonHeadIB.6]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonHead.ib
+
+[ResourcePaimonBodyIB.6]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonBody.ib
+
+[ResourcePaimonCloakHeadIB.6]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonCloakHead.ib
+
+[ResourcePaimonHeadDiffuse.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonCloakHeadDiffuse.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonCloakHeadDiffuse.dds
+
+[ResourcePaimonCloakHeadLightMap.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonCloakHeadLightMap.dds
+
+[ResourcePaimonCloakHeadShadowRamp.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonCloakHeadShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.6]
+filename = .\PaimonMod06_NoShoesNoCloak\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.7]
+type = Buffer
+stride = 40
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonPosition.buf
+
+[ResourcePaimonBlend.7]
+type = Buffer
+stride = 32
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.7]
+type = Buffer
+stride = 20
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonTexcoord.buf
+
+[ResourcePaimonHeadIB.7]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonHead.ib
+
+[ResourcePaimonBodyIB.7]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonBody.ib
+
+[ResourcePaimonHeadDiffuse.7]
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.7]
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.7]
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.7]
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.7]
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.7]
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.7]
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.7]
+filename = .\PaimonMod07_NoShoesNoHalo\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.8]
+type = Buffer
+stride = 40
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonPosition.buf
+
+[ResourcePaimonBlend.8]
+type = Buffer
+stride = 32
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.8]
+type = Buffer
+stride = 20
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonTexcoord.buf
+
+[ResourcePaimonCloakPosition.8]
+type = Buffer
+stride = 40
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonCloakPosition.buf
+
+[ResourcePaimonCloakBlend.8]
+type = Buffer
+stride = 32
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonCloakBlend.buf
+
+[ResourcePaimonCloakTexcoord.8]
+type = Buffer
+stride = 8
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonCloakTexcoord.buf
+
+[ResourcePaimonHeadIB.8]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonHead.ib
+
+[ResourcePaimonBodyIB.8]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonBody.ib
+
+[ResourcePaimonCloakHeadIB.8]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonCloakHead.ib
+
+[ResourcePaimonHeadDiffuse.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonCloakHeadDiffuse.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonCloakHeadDiffuse.dds
+
+[ResourcePaimonCloakHeadLightMap.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonCloakHeadLightMap.dds
+
+[ResourcePaimonCloakHeadShadowRamp.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonCloakHeadShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.8]
+filename = .\PaimonMod08_NoGlovesNoCloak\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.9]
+type = Buffer
+stride = 40
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonPosition.buf
+
+[ResourcePaimonBlend.9]
+type = Buffer
+stride = 32
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.9]
+type = Buffer
+stride = 20
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonTexcoord.buf
+
+[ResourcePaimonHeadIB.9]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonHead.ib
+
+[ResourcePaimonBodyIB.9]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonBody.ib
+
+[ResourcePaimonHeadDiffuse.9]
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.9]
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.9]
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.9]
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.9]
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.9]
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.9]
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.9]
+filename = .\PaimonMod09_NoGlovesNoHalo\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.10]
+type = Buffer
+stride = 40
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonPosition.buf
+
+[ResourcePaimonBlend.10]
+type = Buffer
+stride = 32
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.10]
+type = Buffer
+stride = 20
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonTexcoord.buf
+
+[ResourcePaimonCloakPosition.10]
+type = Buffer
+stride = 40
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonCloakPosition.buf
+
+[ResourcePaimonCloakBlend.10]
+type = Buffer
+stride = 32
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonCloakBlend.buf
+
+[ResourcePaimonCloakTexcoord.10]
+type = Buffer
+stride = 8
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonCloakTexcoord.buf
+
+[ResourcePaimonHeadIB.10]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonHead.ib
+
+[ResourcePaimonBodyIB.10]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonBody.ib
+
+[ResourcePaimonCloakHeadIB.10]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonCloakHead.ib
+
+[ResourcePaimonHeadDiffuse.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonCloakHeadDiffuse.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonCloakHeadDiffuse.dds
+
+[ResourcePaimonCloakHeadLightMap.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonCloakHeadLightMap.dds
+
+[ResourcePaimonCloakHeadShadowRamp.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonCloakHeadShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.10]
+filename = .\PaimonMod10_NoCloakNoHalo\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.11]
+type = Buffer
+stride = 40
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonPosition.buf
+
+[ResourcePaimonBlend.11]
+type = Buffer
+stride = 32
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.11]
+type = Buffer
+stride = 20
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonTexcoord.buf
+
+[ResourcePaimonCloakPosition.11]
+type = Buffer
+stride = 40
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonCloakPosition.buf
+
+[ResourcePaimonCloakBlend.11]
+type = Buffer
+stride = 32
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonCloakBlend.buf
+
+[ResourcePaimonCloakTexcoord.11]
+type = Buffer
+stride = 8
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonCloakTexcoord.buf
+
+[ResourcePaimonHeadIB.11]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonHead.ib
+
+[ResourcePaimonBodyIB.11]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonBody.ib
+
+[ResourcePaimonCloakHeadIB.11]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonCloakHead.ib
+
+[ResourcePaimonHeadDiffuse.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonCloakHeadDiffuse.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonCloakHeadDiffuse.dds
+
+[ResourcePaimonCloakHeadLightMap.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonCloakHeadLightMap.dds
+
+[ResourcePaimonCloakHeadShadowRamp.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonCloakHeadShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.11]
+filename = .\PaimonMod11_NoShoesNoGlovesNoCloak\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.12]
+type = Buffer
+stride = 40
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonPosition.buf
+
+[ResourcePaimonBlend.12]
+type = Buffer
+stride = 32
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.12]
+type = Buffer
+stride = 20
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonTexcoord.buf
+
+[ResourcePaimonHeadIB.12]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonHead.ib
+
+[ResourcePaimonBodyIB.12]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonBody.ib
+
+[ResourcePaimonHeadDiffuse.12]
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.12]
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.12]
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.12]
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.12]
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.12]
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.12]
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.12]
+filename = .\PaimonMod12_NoShoesNoGlovesNoHalo\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.13]
+type = Buffer
+stride = 40
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonPosition.buf
+
+[ResourcePaimonBlend.13]
+type = Buffer
+stride = 32
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.13]
+type = Buffer
+stride = 20
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonTexcoord.buf
+
+[ResourcePaimonCloakPosition.13]
+type = Buffer
+stride = 40
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonCloakPosition.buf
+
+[ResourcePaimonCloakBlend.13]
+type = Buffer
+stride = 32
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonCloakBlend.buf
+
+[ResourcePaimonCloakTexcoord.13]
+type = Buffer
+stride = 8
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonCloakTexcoord.buf
+
+[ResourcePaimonHeadIB.13]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonHead.ib
+
+[ResourcePaimonBodyIB.13]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonBody.ib
+
+[ResourcePaimonCloakHeadIB.13]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonCloakHead.ib
+
+[ResourcePaimonHeadDiffuse.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonCloakHeadDiffuse.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonCloakHeadDiffuse.dds
+
+[ResourcePaimonCloakHeadLightMap.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonCloakHeadLightMap.dds
+
+[ResourcePaimonCloakHeadShadowRamp.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonCloakHeadShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.13]
+filename = .\PaimonMod13_NoShoesNoCloakNoHalo\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.14]
+type = Buffer
+stride = 40
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonPosition.buf
+
+[ResourcePaimonBlend.14]
+type = Buffer
+stride = 32
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.14]
+type = Buffer
+stride = 20
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonTexcoord.buf
+
+[ResourcePaimonCloakPosition.14]
+type = Buffer
+stride = 40
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonCloakPosition.buf
+
+[ResourcePaimonCloakBlend.14]
+type = Buffer
+stride = 32
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonCloakBlend.buf
+
+[ResourcePaimonCloakTexcoord.14]
+type = Buffer
+stride = 8
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonCloakTexcoord.buf
+
+[ResourcePaimonHeadIB.14]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonHead.ib
+
+[ResourcePaimonBodyIB.14]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonBody.ib
+
+[ResourcePaimonCloakHeadIB.14]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonCloakHead.ib
+
+[ResourcePaimonHeadDiffuse.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonCloakHeadDiffuse.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonCloakHeadDiffuse.dds
+
+[ResourcePaimonCloakHeadLightMap.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonCloakHeadLightMap.dds
+
+[ResourcePaimonCloakHeadShadowRamp.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonCloakHeadShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.14]
+filename = .\PaimonMod14_NoGlovesNoCloakNoHalo\PaimonFaceHeadDiffuse.dds
+
+[ResourcePaimonPosition.15]
+type = Buffer
+stride = 40
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonPosition.buf
+
+[ResourcePaimonBlend.15]
+type = Buffer
+stride = 32
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonBlend.buf
+
+[ResourcePaimonTexcoord.15]
+type = Buffer
+stride = 20
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonTexcoord.buf
+
+[ResourcePaimonCloakPosition.15]
+type = Buffer
+stride = 40
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonCloakPosition.buf
+
+[ResourcePaimonCloakBlend.15]
+type = Buffer
+stride = 32
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonCloakBlend.buf
+
+[ResourcePaimonCloakTexcoord.15]
+type = Buffer
+stride = 8
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonCloakTexcoord.buf
+
+[ResourcePaimonHeadIB.15]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonHead.ib
+
+[ResourcePaimonBodyIB.15]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonBody.ib
+
+[ResourcePaimonCloakHeadIB.15]
+type = Buffer
+format = DXGI_FORMAT_R16_UINT
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonCloakHead.ib
+
+[ResourcePaimonHeadDiffuse.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonHeadDiffuse.dds
+
+[ResourcePaimonHeadLightMap.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonHeadLightMap.dds
+
+[ResourcePaimonHeadDiffuseGuide.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonHeadDiffuseGuide.dds
+
+[ResourcePaimonHeadShadowRamp.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonHeadShadowRamp.jpg
+
+[ResourcePaimonBodyDiffuse.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonBodyDiffuse.dds
+
+[ResourcePaimonBodyLightMap.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonBodyLightMap.dds
+
+[ResourcePaimonBodyShadowRamp.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonBodyShadowRamp.jpg
+
+[ResourcePaimonCloakHeadDiffuse.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonCloakHeadDiffuse.dds
+
+[ResourcePaimonCloakHeadLightMap.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonCloakHeadLightMap.dds
+
+[ResourcePaimonCloakHeadShadowRamp.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonCloakHeadShadowRamp.jpg
+
+[ResourcePaimonFaceHeadDiffuse.15]
+filename = .\PaimonMod15_NoShoesNoGlovesNoCloakNoHalo\PaimonFaceHeadDiffuse.dds
+
+
+
+; .ini generated by GIMI (Genshin-Impact-Model-Importer) mod merger script
+; If you have any issues or find any bugs, please open a ticket at https://github.com/SilentNightSound/GI-Model-Importer/issues or contact SilentNightSound#7430 on discord
+
+; 4.1 Character Fix 
+[TextureOverride41FixVertexLimitRaise0]
+hash = 42e75140
+match_priority = 1

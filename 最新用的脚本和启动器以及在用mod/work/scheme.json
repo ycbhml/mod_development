@@ -1,0 +1,8 @@
+{
+	"dll": "d3d11.dll",
+	"version": "v7.0 playing mods",
+	"launch": "3DMigoto Loader.exe",
+	"set-mode": "conventional",
+	"set-need": true,
+	"loading-mode": "inject"
+}
